@@ -1,0 +1,202 @@
+:root{
+    --title-font : 'Oswald', sans-serif;
+    --subtitle-font: 'Roboto', sans-serif;
+}
+
+body{
+    font-family: var(--subtitle-font);
+    padding: 0;
+
+}
+
+.title_taks{
+    justify-content: center;
+    display: flex;
+    font-size: 20px;
+    padding: 1rem;
+    font-family: var(--title-font);
+    font-weight: 400;
+}
+.search-icon-find{
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.filter-task{
+    display: flex;
+    margin: 0 auto;
+    width: 70%;
+    height: 1rem;
+    border: 3px solid #1b65f8;
+    border-radius: 12px;
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: var(--subtitle-font);
+    cursor: pointer;
+}
+.task-list{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 1rem;
+    font-size: 1rem;
+    padding: 5rem 2rem 5rem 2rem ;
+}
+.task-list__item{
+    background-color: #42db75;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    position: relative;
+    color: #fff;
+    font-weight: 600;
+
+}
+
+.task-list__item-check{
+    position: absolute;
+    left: 0;
+    margin: 0 0 0 20px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.task-list__item-check:hover{
+    color: #1b65f8;
+    transition: 0.5s;
+}
+.task-list__item-check--active{
+    color: #1b65f8;
+}
+.task-list__item:hover .task-list__item-check--active{
+    color: #1b65f8;
+}
+.task-list__item-delete{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5px 5px 0 0;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+.task-list__item-delete{
+    color: rgb(255, 92, 92);
+
+}
+.paragragh-taks--active{
+    text-decoration: line-through;
+}
+
+.add-item-modal{
+    display: flex;
+    margin: 0 auto;
+    width: 10rem;
+    height: 2rem;
+    font-size: 1rem;
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(77, 106, 185, 0.418);
+    border-radius: 0.5rem;
+    border: none;
+    font-family: var(--title-font);
+    color: #fff;
+}
+
+/* SECTION FOR DESKTOP */
+.section-desktop{
+    display: none;
+}
+
+
+@media(min-width : 720px){
+    .section-main{
+        display: grid;
+        grid-template-columns: auto 50%;
+        justify-content: center;
+        gap: 15px;
+        height: 100vh;
+    }
+    .section-tasks{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        overflow: scroll;
+        align-items: center;
+    }
+   .desktop-image__task{
+    display: flex;
+    width: 500px;
+    justify-self: start;
+   }
+   .section-desktop{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+   }
+   .title_taks{
+    font-size: 1.5rem;
+   }
+
+   .filter-task{
+    border: 2px solid #42db75;
+    background-color: #dae8f4;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   }
+   .filter-task:focus{
+    outline:  #1b65f8;
+   }
+   .task-list {
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+   }
+   .task-list__item-check--active{
+    color: #42db75;
+}
+   .task-list__item{
+    background-color: #1b65f8;
+    transition: 0.3s;
+    width: 23rem;
+   }
+   .task-list__item:hover{
+    background-color: #42db75;
+    transition: 0.3s;
+   }
+   .task-list__item:hover .task-list__item-check:hover{
+    color: #1b65f8;
+   }
+   .add-item-modal{
+    width: 9rem;
+    height: 2.3rem;
+    background-color: #0e1c56;
+    cursor: pointer;
+    transition: 0.3s;
+   }
+   .add-item-modal:hover{
+    transition: 0.3s;
+    background-color: #404dad;
+    justify-content: center;
+   }
+}
+.ModalBackground{
+    background-color: rgba(32,35,41,.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
